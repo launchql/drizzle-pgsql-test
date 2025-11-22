@@ -1,11 +1,11 @@
-# drizzle-orm-test demo
+# drizzle-orm-test test suite
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/launchql/launchql/refs/heads/main/assets/outline-logo.svg" width="250"><br />
     drizzle-orm-test demo
 </p>
 
-This demo shows how to use `drizzle-orm-test` for fast, isolated PostgreSQL testing with [Drizzle ORM](https://orm.drizzle.team/). The package is powered by [pgsql-test](https://www.npmjs.com/package/pgsql-test).
+This demo shows how to use `drizzle-orm-test` for fast, isolated PostgreSQL testing with [Drizzle ORM](https://orm.drizzle.team/). The package is powered by [drizzle-orm-test](https://www.npmjs.com/package/drizzle-orm-test).
 
 ## What is drizzle-orm-test?
 
@@ -26,18 +26,9 @@ let teardown: () => Promise<void>;
 beforeAll(async () => {
   ({ pg, db, teardown } = await getConnections());
 });
-
-afterAll(async () => {
-  await teardown();
-});
-
-beforeEach(async () => {
-  await db.beforeEach();
-});
-
-afterEach(async () => {
-  await db.afterEach();
-});
+afterAll(async () => { await teardown(); });
+beforeEach(async () => { await db.beforeEach(); });
+afterEach(async () => { await db.afterEach(); });
 
 describe('your tests', () => {
   it('should work with standard Drizzle pattern', async () => {
@@ -78,10 +69,33 @@ cd packages/drizzle
 pnpm test:watch
 ```
 
+## Education and Tutorials
+
+ 1. 🚀 [Quickstart: Getting Up and Running](https://launchql.com/learn/quickstart)
+Get started with modular databases in minutes. Install prerequisites and deploy your first module.
+
+ 2. 📦 [Modular PostgreSQL Development with Database Packages](https://launchql.com/learn/modular-postgres)
+Learn to organize PostgreSQL projects with pgpm workspaces and reusable database modules.
+
+ 3. ✏️ [Authoring Database Changes](https://launchql.com/learn/authoring-database-changes)
+Master the workflow for adding, organizing, and managing database changes with pgpm.
+
+ 4. 🧪 [End-to-End PostgreSQL Testing with TypeScript](https://launchql.com/learn/e2e-postgres-testing)
+Master end-to-end PostgreSQL testing with ephemeral databases, RLS testing, and CI/CD automation.
+
+ 5. ⚡ [Supabase Testing](https://launchql.com/learn/supabase)
+Use TypeScript-first tools to test Supabase projects with realistic RLS, policies, and auth contexts.
+
+ 6. 💧 [Drizzle ORM Testing](https://launchql.com/learn/drizzle-testing)
+Run full-stack tests with Drizzle ORM, including database setup, teardown, and RLS enforcement.
+
+ 7. 🔧 [Troubleshooting](https://launchql.com/learn/troubleshooting)
+Common issues and solutions for pgpm, PostgreSQL, and testing.
+
+
 ## Credits
 
 🛠 Built by LaunchQL — checkout [our github ⚛️](https://github.com/launchql)
-
 
 ## Disclaimer
 
