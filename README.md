@@ -1,19 +1,19 @@
-# pgsql-test + drizzle demo
+# drizzle-orm-test demo
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/launchql/launchql/refs/heads/main/assets/outline-logo.svg" width="250"><br />
-    pgsql-test + drizzle demo
+    drizzle-orm-test demo
 </p>
 
-This demo shows how to use [pgsql-test](https://www.npmjs.com/package/pgsql-test) with [Drizzle ORM](https://orm.drizzle.team/) for fast, isolated PostgreSQL testing.
+This demo shows how to use `drizzle-orm-test` for fast, isolated PostgreSQL testing with [Drizzle ORM](https://orm.drizzle.team/). The package is powered by [pgsql-test](https://www.npmjs.com/package/pgsql-test).
 
-## What is pgsql-test?
+## What is drizzle-orm-test?
 
-`pgsql-test` provides isolated PostgreSQL databases for testing with transaction-based cleanup between tests. 
+`drizzle-orm-test` provides a testing utility for Drizzle ORM with isolated PostgreSQL databases and transaction-based cleanup between tests.
 
-## How it works with Drizzle
+## Usage
 
-The integration is straightforward - `pgsql-test` provides the database connection that Drizzle uses:
+Here's how to use it:
 
 ```typescript
 import { drizzle } from 'drizzle-orm/node-postgres';
@@ -65,6 +65,9 @@ it('user should only see their own rows', async () => {
   expect(rows.every(r => r.userId === '1')).toBe(true);
 });
 ```
+
+Check out the [package source](./packages/drizzle) and [test examples](./packages/drizzle/__tests__) to see how it works!
+
 
 ## Developing
 

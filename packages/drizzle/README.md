@@ -1,15 +1,15 @@
-# pgsql-test + Drizzle Integration
+# drizzle-orm-test example module
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/launchql/launchql/refs/heads/main/assets/outline-logo.svg" width="250"><br />
-    Drizzle ORM with pgsql-test
+    drizzle-orm-test
 </p>
 
-This package demonstrates how to integrate [Drizzle ORM](https://orm.drizzle.team/) with [pgsql-test](https://www.npmjs.com/package/pgsql-test) for fast, isolated PostgreSQL testing.
+A testing utility for [Drizzle ORM](https://orm.drizzle.team/) that provides fast, isolated PostgreSQL testing. Powered by [pgsql-test](https://www.npmjs.com/package/pgsql-test).
 
 ## Overview
 
-`pgsql-test` provides isolated PostgreSQL databases for testing with transaction-based cleanup. By combining it with Drizzle, you get:
+`drizzle-orm-test` provides:
 
 - Fast test execution with transaction-based isolation
 - Proper cleanup between tests
