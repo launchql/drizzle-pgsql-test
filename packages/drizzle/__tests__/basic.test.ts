@@ -1,5 +1,5 @@
 import { drizzle } from 'drizzle-orm/node-postgres';
-import { getConnections, PgTestClient } from 'pgsql-test';
+import { getConnections, PgTestClient } from 'drizzle-orm-test';
 
 let db: PgTestClient;
 let pg: PgTestClient;

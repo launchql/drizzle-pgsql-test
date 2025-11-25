@@ -24,10 +24,9 @@
   "keywords": [],
   "devDependencies": {
     "drizzle-kit": "^0.31.7",
-    "pgsql-test": "^2.13.2"
+    "drizzle-orm-test": "^0.2.8"
   },
   "dependencies": {
-    "drizzle-orm": "^0.44.7",
-    "drizzle-orm-test": "^0.2.1"
+    "drizzle-orm": "^0.44.7"
   }
 }
